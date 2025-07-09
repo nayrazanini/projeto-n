@@ -39,7 +39,7 @@ O **Projeto N** é uma ferramenta modular e interativa desenvolvida para organiz
 
 > O painel se adapta à tela e permite gerar conteúdo a qualquer momento:
 
-![Visual da interface do Projeto N](./docs/interface.png)
+![Visual da interface do Projeto N](projeto-n.jpg)
 
 ---
 
