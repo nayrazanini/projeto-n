@@ -1,13 +1,14 @@
 # Projeto N – Organização Semanal com JavaScript
 
-O **Projeto N** é uma ferramenta modular e interativa desenvolvida para organizar a rotina semanal de estudos, produção e autodesenvolvimento. É um projeto pessoal construído com **HTML, TailwindCSS e JavaScript puro**, com foco na prática da linguagem e na criação de algo funcional e útil para minha jornada profissional.
+O **Projeto N** é uma ferramenta modular e interativa desenvolvida para organizar a rotina de estudos, produção e autodesenvolvimento. Foi construído com foco em praticar **JavaScript puro**, criar algo funcional e aplicar conhecimentos reais enquanto estudo.
 
 ## -> Objetivo
 
-- Planejar tarefas da semana com base em energia, tipo e foco
-- Exportar os dados como `.json` para histórico pessoal e análise
-- Gerar resumos prontos para publicação em Markdown e no LinkedIn
-- Usar o próprio projeto como prática contínua de JavaScript
+- Registrar tarefas e aprendizados do dia
+- Exportar o conteúdo como `.json` para controle pessoal
+- Gerar resumos automáticos em Markdown para GitHub
+- Criar textos prontos para LinkedIn com apoio de IA (ChatGPT)
+- Praticar JavaScript em um projeto real e evolutivo
 
 ## -> Tecnologias
 
@@ -17,30 +18,35 @@ O **Projeto N** é uma ferramenta modular e interativa desenvolvida para organiz
 
 ## -> Organização do projeto
 
-- `index.html` – Painel interativo semanal
-- `script.js` – Lógica de geração de blocos e exportação
-- `/semanas/` – Arquivos semanais `.json` e `.md` com o histórico
+- `index.html` – Interface com painel único de entrada
+- `script.js` – Toda a lógica de exportação e geração de textos
+- `/semanas/` – Arquivos com registros diários
 - `README.md` – Apresentação do projeto
 
 ## -> Como usar
 
 1. Clone o repositório
 2. Abra `index.html` no navegador
-3. Digite suas tarefas em cada dia da semana
-4. Clique em “📤 Exportar” para salvar o planejamento como `.json`
-5. Suba o arquivo para a pasta `/semanas/`
+3. Digite a tarefa que realizou no dia e o que aprendeu com ela
+4. Clique em **“📤 Exportar”** para salvar como `.json`
+5. Clique em **"📄 Gerar Resumo"** para exportar como Markdown
+6. Clique em **"📋 Gerar texto para ChatGPT"** para copiar o prompt com seus dados e colar no chat.openai.com
+7. Clique em **"📝 Gerar Post para LinkedIn"** para copiar e abrir a página de postagem
 
-## -> Em desenvolvimento
+---
 
-- Adição de categorias e filtros
-- Geração automática de resumos semanais
-- Visualização gráfica de progresso
-- Integração futura com GitHub API
+## Visual da interface
+
+> O painel se adapta à tela e permite gerar conteúdo a qualquer momento:
+
+![Visual da interface do Projeto N](./docs/interface.png)
+
+---
 
 ## -> GitHub Pages
 
-Você pode visualizar a ferramenta em:
-[https://nayrazanini.github.io/projeto-n/](https://nayrazanini.github.io/projeto-n/)
+Você pode visualizar a ferramenta em:  
+🔗 [https://nayrazanini.github.io/projeto-n/](https://nayrazanini.github.io/projeto-n/)
 
 ---
 
