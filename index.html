@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Náyra Zanini - Portfólio</title>
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto N – Painel Semanal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
 </head>
-<body class="bg-black text-white font-sans break-words antialiased" id="topo">
-<!-- NAVBAR -->
-<header class="fixed top-0 w-full bg-black z-10 border-b border-gray-700">
-<nav class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
-<a class="text-lg font-bold bg-gradient-to-r from-red-500 to-yellow-400 text-transparent bg-clip-text" href="/nayra.dev-portfolio/">nayra.dev</a>
-<!-- Menu Desktop -->
-<ul class="hidden md:flex gap-6 text-base font-medium">
-<li><a class="text-gray-300 hover:text-yellow-400 transition" href="/nayra.dev-portfolio/artigos/">Artigos</a></li>
-<li><a class="text-gray-300 hover:text-yellow-400 transition" href="/nayra.dev-portfolio/projetos/Projetos-de-Estudo/">Projetos</a></li>
-<li><a class="text-gray-300 hover:text-yellow-400 transition" href="/nayra.dev-portfolio/estudos/">Estudos</a></li>
-</ul>
-</nav>
+<body class="bg-black text-white font-sans antialiased" id="topo">
+
+<!-- HEADER SIMPLES -->
+<header class="w-full bg-black border-b border-gray-700 mb-8">
+  <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a class="text-lg font-bold bg-gradient-to-r from-red-500 to-yellow-400 text-transparent bg-clip-text" href="#">Projeto N</a>
+    <span class="text-sm text-gray-400 hidden sm:inline">Organização Semanal</span>
+  </nav>
 </header>
 
 <!-- CONTEÚDO PRINCIPAL -->
 <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
-  <h1 class="text-3xl font-bold mb-6 bg-gradient-to-r from-red-500 to-yellow-400 text-transparent bg-clip-text"> Painel Semanal</h1>
+  <h1 class="text-3xl font-bold mb-6 bg-gradient-to-r from-red-500 to-yellow-400 text-transparent bg-clip-text">📅 Painel Semanal</h1>
   
   <div id="painel" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8"></div>
 
   <div class="flex gap-4 flex-wrap">
+    <button onclick="gerarMarkdown()" class="bg-yellow-400 text-black px-4 py-2 rounded font-semibold hover:opacity-90 transition">📄 Gerar Resumo (.md)</button>
     <button onclick="exportarJSON()" class="bg-yellow-400 text-black px-4 py-2 rounded font-semibold hover:opacity-90 transition">
-      📤 Exportar Semana 
+      📤 Exportar Semana (.json)
     </button>
   </div>
+<div id="resultado-md" class="mt-8"></div>
 </main>
 
 <!-- RODAPÉ -->

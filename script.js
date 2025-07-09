@@ -1,4 +1,3 @@
-
 const dias = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"];
 
 function criarPainel() {
@@ -30,3 +29,36 @@ function exportarJSON() {
 }
 
 window.onload = criarPainel;
+
+
+
+function gerarMarkdown() {
+  const data = new Date().toISOString().split("T")[0];
+  const colunas = document.querySelectorAll("#painel > div");
+  let md = `# 🧠 Resumo da Semana – Projeto N\n**Data:** ${data}\n\n## ✅ Tarefas realizadas\n`;
+
+  dias.forEach((dia, i) => {
+    const linhas = colunas[i].querySelector("textarea").value.trim().split("\n").filter(Boolean);
+    if (linhas.length > 0) {
+      md += `\n### ${dia.charAt(0).toUpperCase() + dia.slice(1)}\n`;
+      linhas.forEach(linha => {
+        const partes = linha.split("|").map(p => p.trim());
+        const tarefa = partes[0] || "-";
+        const tipo = partes[1] || "Outro";
+        const energia = partes[2] || "-";
+        md += `- ${tarefa} (${tipo} • Energia: ${energia})\n`;
+      });
+    }
+  });
+
+  md += "\n## 💬 Reflexão\nOrganizar a semana com clareza e intenção me ajuda a manter foco e consistência.\n";
+
+  const output = document.createElement("textarea");
+  output.className = "w-full mt-6 p-4 bg-gray-900 text-white border border-gray-600 rounded";
+  output.rows = 15;
+  output.value = md;
+
+  const container = document.getElementById("resultado-md");
+  container.innerHTML = ""; // limpa antes
+  container.appendChild(output);
+}
