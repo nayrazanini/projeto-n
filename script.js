@@ -21,7 +21,7 @@ function gerarMarkdown() {
   const tarefa = document.getElementById("tarefa").value.trim();
   const aprendizado = document.getElementById("aprendizado").value.trim();
 
-  let md = `# 🧠 Registro Diário – Projeto N\n**Data:** ${data}\n\n## ✅ Atividade\n- ${tarefa}\n\n## 📘 Aprendizado\n- ${aprendizado}\n\n## 💬 Reflexão\nOrganizar meu progresso me ajuda a manter foco e constância.\n`;
+  let md = `# 🧠 Registro Diário – Projeto N\n**Data:** ${data}\n\n## ✅ Atividade\n- ${tarefa}\n\n## 📘 Aprendizado\n- ${aprendizado}\n\n## 💬 Reflexão\n Tudo que aprendo tem se tornado importante para a evolução desse portfólio e para meu desenvolvimento pessoal.\n`;
 
   const container = document.getElementById("resultado-md");
   container.innerHTML = "";
