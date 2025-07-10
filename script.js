@@ -75,7 +75,7 @@ function gerarPromptChatGPT() {
   const aprendizado = document.getElementById("aprendizado").value.trim();
   const data = new Date().toLocaleDateString("pt-BR");
 
-  const prompt = `Você é um especialista em gerar textos profissionais e motivadores para LinkedIn.\n\nBaseado no conteúdo abaixo (atividade e aprendizado do dia ${data}), gere um post de LinkedIn claro, humano, leve e com tom de aprendizado e constância.\n\nAtividade: ${tarefa}\nAprendizado: ${aprendizado}\n\nUse emojis com moderação e inclua hashtags relevantes.`;
+  const prompt = `Você é um especialista em gerar textos profissionais e motivadores para LinkedIn.\n\nBaseado no conteúdo abaixo (atividade e aprendizado do dia ${data}), gere um post de LinkedIn claro, humano, leve e com tom de aprendizado e constância.\n\nAtividade: ${tarefa}\nAprendizado: ${aprendizado}\n\nUse emojis com moderação e inclua hashtags relevantes. Nesse texto quero que associe à temas relevantes do dia atual, o que está em alta na área que está sendo estudada. Utilize palavras chaves facilitadoras para um recrutador me encontrar`;
 
   const container = document.getElementById("resultado-md");
   container.innerHTML = "<h2 class='text-lg font-semibold mt-8 mb-2 text-yellow-400'>📋 Prompt para ChatGPT</h2>";
